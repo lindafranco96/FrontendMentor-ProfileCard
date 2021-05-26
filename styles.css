@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clrDarkCyan: hsl(185, 75%, 39%);
+    --clrDarkDesaBlue: hsl(229, 23%, 23%);
+    --clrGrayishBlue: hsl(227, 10%, 46%);
+
+    --clrDarkGray: hsl(0, 0%, 59%);   
+    --clrWhite: hsl(0, 0%, 100%);  
+}
+
+body {
+    background-color: var(--clrDarkCyan);
+    color: var(--clrDarkDesaBlue);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    background-color: var(--clrWhite);
+    z-index: 200;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 100px 5px hsla(0, 0%, 1%, 0.226);
+}
+
+.card .image {
+    background-image: url(images/bg-pattern-card.svg);
+    background-size: cover;
+    height: 150px;
+}
+
+.victor-image {
+    border-radius: 50%;
+    border: 4px solid var(--clrWhite);
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: -50px auto 30px auto;
+    transition: .4s all ease;
+}
+
+.victor-image:hover {
+    transform: scale(1.1);
+}
+
+.info {
+    font-size: 14px;
+}
+
+.info__age {
+    color: var(--clrDarkGray);
+    margin-left: 6px;
+    font-weight: 400;
+}
+
+.info__city {
+    color: var(--clrDarkGray);
+    margin: 15px 0 25px 0;
+}
+
+.meta {
+    height: 25%;
+    border-top: 1px solid hsl(0, 1%, 81%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meta__content {
+    margin: 0 20px;
+}
+
+.meta__content-number {
+    font-weight: 700;
+}
+
+.meta__content-type {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--clrDarkGray);
+    letter-spacing: 1px;
+}
+
+.pattern .top,
+.pattern .bottom {
+    position: absolute;
+}
+
+.pattern .top{
+    left: -20%;
+    top: -70%;
+}
+
+.pattern .bottom {
+    right: -20%;
+    bottom: -70%;
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: 320px;
+    }
+
+    .pattern .top{
+        left: -210%;
+        top: -90%;
+    }
+    
+    .pattern .bottom {
+        bottom: -90%;
+        right: -210%;
+    }
+}
